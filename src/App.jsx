@@ -50,7 +50,7 @@ function App() {
       moneda,
     }
     setSelectedDate(fecha)
-    setDataState([...dataState, newData])
+    setDataState([newData, ...dataState])
     setValidar(true)
   }
   return (
