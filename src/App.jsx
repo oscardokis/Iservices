@@ -24,7 +24,7 @@ function App() {
         <div className='flex gap-3'>
           <p className='w-28 flex'>Tipo Token</p>
           <select name="" id="" className='border border-cyan-800 w-36'>
-            <option value="">Venta tiquetes</option>
+            <option value="" className='p-2'>Venta tiquetes</option>
             <option value="">Recarga subsidiada</option>
             <option value="">Recarga QR</option>
           </select>
@@ -37,8 +37,8 @@ function App() {
           <div className='flex gap-3'>
           <p className='w-28 flex'>Moneda</p>
           <select name="" id="" className='border border-cyan-800 w-36'>
-            <option value="">USD</option>
             <option value="">COP</option>
+            <option value="">USD</option>
           </select>
         </div>
         </div>
