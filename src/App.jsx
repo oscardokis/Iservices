@@ -41,7 +41,7 @@ function App() {
     const tipoToken = formData.get('tipoToken')
     const valorUnitario = formData.get('valorUnitario')
     const moneda = formData.get('moneda')
-    
+    if(!fecha || !cantidad || !tipoToken || !valorUnitario || !moneda) return alert('Por favor llenar todos los datos generales para crear un token')
     const newData = {
       fecha,
       cantidad,
@@ -97,7 +97,7 @@ function App() {
       <hr />
       <h3 className='flex p-3 font-bold '>Usuarios Responsables</h3>
       <hr />
-      <form action="" className='flex flex-col items-center gap-3 my-3 flex-wrap'>
+      <form action="" className='flex flex-col items-start gap-3 my-3 flex-wrap'>
         <div className='flex justify-start items-center gap-3'>
           <p className='flex w-40'>Usuario Administrador</p>
           <input type="text" className='border border-cyan-800 px-3'/>
@@ -119,11 +119,13 @@ function App() {
           <input type="password" className='border border-cyan-800 px-3'/>
           <Aprovar />
         </div>
-        {!validar ? (<button 
+      </form>
+      <div className='flex justify-center items-center mb-3'>
+      {!validar ? (<button 
         className='border border-cyan-800 px-3 py-1 bg-cyan-800 text-white hover:bg-cyan-700' 
         onClick={(e) => validarGuardar(e)}>Validar</button>):(
         <h3 className='px-3 py-1 text-green-600 font-semibold ' >Datos validados exitosamente</h3>)}
-      </form>
+      </div>
       <hr />
         <h3 className='flex p-3 font-bold '>Tokens Creados</h3>
       <hr />
