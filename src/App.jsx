@@ -4,8 +4,7 @@ import { Aprovar } from './Aprovar'
 
 function App() {
   return (
-    <div className=' max-w-screen-md'>
-      <h1>Iservices</h1>
+    <div className='max-w-screen-md m-auto'>
       <div className='bg-cyan-800 h-12 flex pl-3'>
       <img src={burger} alt="Logo"  className='w-9'/>
       </div>
@@ -87,23 +86,23 @@ function App() {
             <tr>
               <td>2021-09-01</td>
               <td>100</td>
-              <td>Tipo 1</td>
+              <td>Venta de tiquetes</td>
               <td>1.00</td>
               <td>USD</td>
             </tr>
             <tr>
               <td>2021-09-02</td>
               <td>200</td>
-              <td>Tipo 2</td>
-              <td>2.00</td>
-              <td>USD</td>
+              <td>Recarga QR</td>
+              <td>20000</td>
+              <td>COP</td>
             </tr>
             <tr>
               <td>2021-09-03</td>
               <td>300</td>
-              <td>Tipo 3</td>
-              <td>3.00</td>
-              <td>USD</td>
+              <td>Recarga subsiada</td>
+              <td>10000</td>
+              <td>COP</td>
             </tr>
           </tbody>
         </table>
