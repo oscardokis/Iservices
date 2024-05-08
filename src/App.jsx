@@ -107,6 +107,13 @@ function App() {
           </tbody>
         </table>
       </div>
+      <div className='flex justify-between mt-3'>
+        <div className='flex gap-3'>
+          <p>Registros recuperados</p>
+          <p className=' font-semibold'>3</p> 
+        </div>
+        <button className='px-2 py-1 text-white bg-cyan-800 border border-solid'>Descargar</button>
+      </div>
     </div>
   )
 }
