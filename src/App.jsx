@@ -45,22 +45,22 @@ function App() {
       <hr />
       <h3 className='flex p-3 font-bold '>Usuarios Responsables</h3>
       <hr />
-      <form action="" className='flex flex-col items-baseline gap-3 my-3'>
-        <div className='flex justify-center items-center gap-6'>
+      <form action="" className='flex flex-col items-baseline gap-3 my-3 w-full flex-wrap'>
+        <div className='flex justify-center items-center gap-3'>
           <p className='flex w-40'>Usuario Administrador</p>
           <input type="text" className='border border-cyan-800 px-3'/>
           <p>Clave</p>
           <input type="password" className='border border-cyan-800 px-3'/>
           <Aprovar/>
         </div>
-        <div className='flex justify-center items-center gap-6'>
+        <div className='flex justify-center items-center gap-3'>
           <p className='flex w-40'>Usuario Autoriza</p>
           <input type="text" className='border border-cyan-800 px-3' />
           <p>Clave</p>
           <input type="password" className='border border-cyan-800 px-3'/>
           <Aprovar/>
         </div>
-        <div className='flex justify-center items-center gap-6'>
+        <div className='flex justify-center items-center gap-3'>
           <p className='flex w-40'>Usuario Valida</p>
           <input type="text" className='border border-cyan-800 px-3'/>
           <p>Clave</p>
@@ -73,8 +73,8 @@ function App() {
       <hr />
       <div>
         <table className='w-full'>
-          <thead>
-            <tr>
+          <thead className='border'>
+            <tr className=' bg-cyan-700 text-white'>
               <th>Fecha</th>
               <th>Cantidad</th>
               <th>Tipo Token</th>
@@ -82,7 +82,7 @@ function App() {
               <th>Moneda</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='border'>
             <tr>
               <td>2021-09-01</td>
               <td>100</td>
