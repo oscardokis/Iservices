@@ -7,8 +7,8 @@ const dataMenu = [
     name: 'Creación de Tokens'
   },
   {
-    path: '/LogTokens',
-    name: 'Log de Tokens'
+    path: '/TrazabilidadTokens',
+    name: 'Trazabilidad de Tokens'
   },
   {
     path: '/Tarifas',

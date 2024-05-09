@@ -4,7 +4,7 @@ import { GeneralProvider } from './context'
 import { BrowserRouter, useRoutes } from 'react-router-dom'
 import Home from './Home'
 import CreacionTokens from './CreacionTokens'
-import LogTokens from './LogTokens'
+import TrazabilidadTokens from './TrazabilidadTokens'
 import Tarifas from './Tarifas'
 import Segmentos from './Segmentos'
 import SegementoTarifas from './SegementoTarifas'
@@ -14,7 +14,7 @@ const AppRouter = () => {
   let routes = useRoutes([
     { path: '/', element: <Home /> },
     { path: '/CreacionTokens', element: <CreacionTokens /> },
-    { path: '/LogTokens', element: <LogTokens /> },
+    { path: '/TrazabilidadTokens', element: <TrazabilidadTokens /> },
     { path: '/Tarifas', element: <Tarifas /> },
     { path: '/Segmentos', element: <Segmentos /> },
     { path: '/SegmentoTarifas', element: <SegementoTarifas /> },
