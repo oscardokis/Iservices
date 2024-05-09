@@ -94,8 +94,8 @@ export default function TrazabilidadTokens() {
       </div>
       <button className='bg-cyan-800 hover:bg-cyan-700 text-white p-2 rounded-sm text-center w-56' onClick={consultar}>Consultar</button>
       {dataState.length > 0 && <table className='w-full'>
-        <thead>
-          <tr>
+        <thead className='border'>
+          <tr className=' bg-cyan-700 text-white'>
             <th>IdToken</th>
             <th>Tipo</th>
             <th>Acción</th>
@@ -103,9 +103,9 @@ export default function TrazabilidadTokens() {
             <th>Usuario</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='border'>
           {dataState.map((token, index) => (
-            <tr key={index}>
+            <tr key={index} className='bg-gray-50'>
               <td>{token.id}</td>
               <td>{token.tipo}</td>
               <td>{token.accion}</td>
