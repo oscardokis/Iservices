@@ -35,8 +35,14 @@ export default function TrazabilidadTokens() {
 
     tokensData.forEach(token => {
       const dateActual = new Date(token.fecha);
-      if (token.tipo === tipoToken && token.accion === accion && dateActual >= dateInitial && dateActual <= dateFinal && token.id >= idInicial && token.id <= idHasta) {
-        dataFilter.push(token)
+      if(token.tipo === tipoToken || tipoToken === 'todos'){
+        if(token.accion === accion || accion === 'todas'){
+          if(dateActual >= dateInitial && dateActual <= dateFinal){
+            if(token.id >= idInicial && token.id <= idHasta){
+              dataFilter.push(token)
+            }
+          }
+        }
       }
     })
     setDataState(dataFilter)
@@ -48,6 +54,7 @@ export default function TrazabilidadTokens() {
         <div className='flex gap-3'>
           <p className='w-28 flex'>Tipo Token</p>
           <select name="tipoToken" id="tipoToken" className='border border-cyan-800 w-36'>
+            <option value="todos" className='p-2'>Todos</option>
             <option value="Venta tiquetes" className='p-2'>Venta tiquetes</option>
             <option value="Recarga subsidiada">Recarga subsidiada</option>
             <option value="Recarga QR">Recarga QR</option>
@@ -56,7 +63,8 @@ export default function TrazabilidadTokens() {
         <div className='flex'>
           <p className='w-28 flex'>Accion</p>
           <select name="accion" id="accion" className='border border-cyan-800 w-36'>
-            <option value="Creado" className='p-2'>Creado</option>
+            <option value="todas" className='p-2'>Todas</option>
+            <option value="Creado">Creado</option>
             <option value="Reservado">Reservado</option>
             <option value="Consumido">Consumido</option>
             <option value="Trasladado">Trasladado</option>
