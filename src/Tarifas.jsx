@@ -139,7 +139,7 @@ export default function Tarifas() {
                       name="numTarifa"
                       value={editFormData.numTarifa}
                       onChange={handleEditFormChange}
-                      className='w-full text-center'
+                      className='w-full text-center outline-none focus:border border-cyan-700'
                     />
                   </td>
                   <td className='w-1/3 p-2'>
@@ -150,7 +150,7 @@ export default function Tarifas() {
                       name="tarifa"
                       value={editFormData.tarifa}
                       onChange={handleEditFormChange}
-                      className='w-full text-center'
+                      className='w-full text-center outline-none focus:border border-cyan-700'
                     />
                   </td>
                   <td className='w-1/3 flex justify-center items-center gap-3 p-2'>
@@ -182,7 +182,7 @@ export default function Tarifas() {
           placeholder="Nuevo número de tarifa..."
           value={addFormData.numTarifa}
           onChange={handleAddFormChange}
-          className='text-center w-1/3 bg-gray-200 hover:bg-gray-300 p-2 m-2'
+          className='text-center w-1/3 bg-gray-200 hover:bg-gray-300 p-2 m-2 outline-none focus:border border-cyan-700'
         />
         <input
           type="text"
@@ -191,7 +191,7 @@ export default function Tarifas() {
           placeholder="Nueva Tarifa..."
           value={addFormData.tarifa}
           onChange={handleAddFormChange}
-          className='text-center w-1/3 bg-gray-200 hover:bg-gray-300 p-2 m-2'
+          className='text-center w-1/3 bg-gray-200 hover:bg-gray-300 p-2 m-2 outline-none focus:border border-cyan-700'
         />
         <button type="submit" className='text-center w-1/3 bg-cyan-700 hover:bg-cyan-800 text-white font-medium px-3 py-1 m-2'>Agregar</button>
       </form>

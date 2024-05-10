@@ -49,11 +49,11 @@ export default function TrazabilidadTokens() {
   }
   return (
     <div className="max-w-screen-lg m-auto">
-    <form className='flex flex-col justify-between items-center gap-6 my-3 w-full' ref={form}>
-      <div className='flex gap-12'>
+    <form className='flex flex-col justify-between items-center gap-6 my-3' ref={form}>
+      <div className='flex gap-12 w-full justify-center'>
         <div className='flex gap-3'>
           <p className='w-28 flex'>Tipo Token</p>
-          <select name="tipoToken" id="tipoToken" className='border border-cyan-800 w-36'>
+          <select name="tipoToken" id="tipoToken" className='outline-none border border-cyan-700 w-48'>
             <option value="todos" className='p-2'>Todos</option>
             <option value="Venta tiquetes" className='p-2'>Venta tiquetes</option>
             <option value="Recarga subsidiada">Recarga subsidiada</option>
@@ -62,7 +62,7 @@ export default function TrazabilidadTokens() {
         </div>
         <div className='flex'>
           <p className='w-28 flex'>Accion</p>
-          <select name="accion" id="accion" className='border border-cyan-800 w-36'>
+          <select name="accion" id="accion" className='outline-none border border-cyan-700 w-48'>
             <option value="todas" className='p-2'>Todas</option>
             <option value="Creado">Creado</option>
             <option value="Reservado">Reservado</option>
@@ -75,21 +75,21 @@ export default function TrazabilidadTokens() {
       <div className='flex gap-12'>
         <div className="flex gap-3 items-center">
           <p className='w-28 flex'>Fecha Inicial</p>
-          <input type="date" className='border border-cyan-800 w-36' name='fechaInicial'/>
+          <input type="date" className='outline-none border border-cyan-700 w-48' name='fechaInicial'/>
         </div>
         <div className="flex items-center">
           <p className='w-28 flex'>Fecha Final</p>
-          <input type="date" className='border border-cyan-800 w-36' name='fechaFinal'/>
+          <input type="date" className='outline-none border border-cyan-700 w-48' name='fechaFinal'/>
         </div>
       </div>
       <div className='flex gap-12'>
         <div className="flex gap-3 items-center">
           <p className='w-28 flex'>Id Inicial</p>
-          <input type="number" className='border border-cyan-800 w-36' name='idInicial'/>
+          <input type="number" className='outline-none border border-cyan-700 w-48' name='idInicial'/>
         </div>
         <div className="flex items-center">
           <p className='w-28 flex'>Id Hasta</p>
-          <input type="number" className='border border-cyan-800 w-36' name='idHasta'/>
+          <input type="number" className='outline-none border border-cyan-700 w-48' name='idHasta'/>
         </div>
       </div>
       <button className='bg-cyan-800 hover:bg-cyan-700 text-white p-2 rounded-sm text-center w-56' onClick={consultar}>Consultar</button>
