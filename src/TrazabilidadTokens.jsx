@@ -48,7 +48,7 @@ export default function TrazabilidadTokens() {
     setDataState(dataFilter)
   }
   return (
-    <div className="max-w-screen-md m-auto">
+    <div className="max-w-screen-lg m-auto">
     <form className='flex flex-col justify-between items-center gap-6 my-3 w-full' ref={form}>
       <div className='flex gap-12'>
         <div className='flex gap-3'>
