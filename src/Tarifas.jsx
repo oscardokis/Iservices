@@ -109,7 +109,7 @@ export default function Tarifas() {
 
   return (
     <div className='max-w-screen-lg m-auto'>
-      <div className='flex justify-start items-center p-3 gap-6 bg-cyan-700 my-3 text-white'>
+      <div className='flex justify-start items-center p-3 gap-6 bg-cyan-700/95 my-3 text-white'>
         <label className='mr-2'>Seleccionar empresa:</label>
         <select value={selectedCompany} onChange={handleCompanyChange} className='py-2 px-6 outline-none bg-cyan-800 text-white border-none focus:border-none'>
           <option value="Translebrija" className='p-3 mb-2'>Translebrija</option>
