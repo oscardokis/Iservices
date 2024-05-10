@@ -4,19 +4,23 @@ export default function Tarifas() {
   // Initialize with sample data for each company
   const initialData = {
     Translebrija: [
-      { id: 1, numTarifa: 1, tarifa: "1000" },
-      { id: 2, numTarifa: 2, tarifa: "1500" },
-      { id: 3, numTarifa: 3, tarifa: "2000" }
+      { id: 1, numTarifa: 1, tarifa: "2000" },
+      { id: 2, numTarifa: 2, tarifa: "2500" },
+      { id: 3, numTarifa: 3, tarifa: "3000" },
+      { id: 4, numTarifa: 4, tarifa: "3500" },
+
     ],
     Unitransa: [
-      { id: 1, numTarifa: 1, tarifa: "1100" },
-      { id: 2, numTarifa: 2, tarifa: "1600" },
-      { id: 3, numTarifa: 3, tarifa: "2100" }
+      { id: 1, numTarifa: 1, tarifa: "2000" },
+      { id: 2, numTarifa: 2, tarifa: "2500" },
+      { id: 3, numTarifa: 3, tarifa: "3000" },
+      { id: 4, numTarifa: 4, tarifa: "3500" },
     ],
     Empresa04: [
-      { id: 1, numTarifa: 1, tarifa: "1200" },
-      { id: 2, numTarifa: 2, tarifa: "1700" },
-      { id: 3, numTarifa: 3, tarifa: "2200" }
+      { id: 1, numTarifa: 1, tarifa: "2000" },
+      { id: 2, numTarifa: 2, tarifa: "2500" },
+      { id: 3, numTarifa: 3, tarifa: "3000" },
+      { id: 3, numTarifa: 3, tarifa: "3500" },
     ]
   };
 
