@@ -20,7 +20,7 @@ const dataMenu = [
   },
   {
     path: '/SegmentoTarifas',
-    name: 'Segmento Tarifas'
+    name: 'Segmentos Tarifas'
   },
 
 ]
