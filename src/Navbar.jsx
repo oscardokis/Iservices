@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import burger from './assets/Burger.svg'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 const dataMenu = [
   {
     path: '/CreacionTokens',
@@ -26,7 +26,17 @@ const dataMenu = [
 ]
 export default function Navbar () {
   const [burgerButton, setBurgerButton] = useState(false)
+  const { pathname } = useLocation();
   const [title, setTitle] = useState('CREACIÓN DE TOKENS')
+  useEffect(() => {
+    const matchedItem = dataMenu.find(item => pathname.includes(item.path));
+    if (matchedItem) {
+      setTitle(matchedItem.name.toUpperCase());
+    } else {
+      setTitle('DEFAULT TITLE');
+    }
+  }, [pathname]);
+  
   function handleBurger(item) {
     setBurgerButton(!burgerButton)
     setTitle(item.name.toUpperCase())
