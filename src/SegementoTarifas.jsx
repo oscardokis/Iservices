@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-export default function SegmentoTarifas() {
+export default function SegementoTarifas() {
   // Initialize with sample data for each company
   const initialData = {
     Translebrija: [
@@ -88,6 +88,16 @@ export default function SegmentoTarifas() {
     setEditRowId(null); // Reset any active editing when changing companies
   };
 
+  // Select options for segmentoIni and segmentoFin based on the selected company
+  const segmentoOptions = {
+    Translebrija: ["Lebrija", "Lebrija - Peaje", "Peaje - Giron", "Giron Bucaramanga"],
+    Metropolitana: ["Bucaramanga", "Florida", "Piedecuesta", "Giron Bucaramanga"],
+    Empresa04: ["Segemento 01", "Segemento 02", "Segemento 03", "Segemento 04"]
+  };
+
+  // Select options for tarifa
+  const tarifaOptions = [2000, 2500, 3000, 3500];
+
   // Function to handle new data input change
   const handleNewDataChange = (event) => {
     const { name, value } = event.target;
@@ -132,92 +142,110 @@ export default function SegmentoTarifas() {
           </tr>
         </thead>
         <tbody className='w-full'>
-        {data[selectedCompany] && data[selectedCompany].map((item) => (
-  <tr key={item.id} className='flex justify-between items-center bg-gray-50'>
-    {editRowId === item.id ? (
-      <>
-        <td className='w-1/4 m-2'>
-          <select
-            value={editFormData.segmentoIni}
-            name="segmentoIni"
-            onChange={handleEditFormChange}
-            className='w-full text-center outline-none border border-cyan-700'
-          >
-            <option value="">{editFormData.segmentoIni}</option>
-          </select>
-        </td>
-        <td className='w-1/4 m-2'>
-          <select
-            value={editFormData.segmentoFin}
-            name="segmentoFin"
-            onChange={handleEditFormChange}
-            className='w-full text-center outline-none border border-cyan-700'
-          >
-            <option value="">{editFormData.segmentoFin}</option>
-          </select>
-        </td>
-        <td className='w-1/4 m-2'>
-          <select
-            value={editFormData.tarifa}
-            name="tarifa"
-            onChange={handleEditFormChange}
-            className='w-full text-center outline-none border border-cyan-700'
-          >
-            {Array.from({ length: 6 }, (_, i) => (2000 + i * 500)).map((option) => (
-              <option key={option} value={option}>{option}</option>
-            ))}
-          </select>
-        </td>
-        <td className='w-1/4 flex justify-center items-center gap-1 m-2'>
-          <button type="button" className='bg-green-200 px-1 py-1' onClick={handleSaveClick}>Guardar</button>
-          <button type="button" className='bg-yellow-200 px-1 py-1' onClick={handleCancelClick}>Cancelar</button>
-          <button type="button" className='bg-red-200 px-1 py-1' onClick={() => handleDeleteClick(item.id)}>Eliminar</button>
-        </td>
-      </>
-    ) : (
-      <>
-        <td className='w-1/4 m-2 text-center'>{item.segmentoIni}</td>
-        <td className='w-1/4 m-2 text-center'>{item.segmentoFin}</td>
-        <td className='w-1/4 m-2 text-center'>{item.tarifa}</td>
-        <td className='w-1/4 m-2 flex justify-center items-center'>
-          <button type="button" className='bg-cyan-700 text-white hover:bg-cyan-800 px-3 py-1' onClick={(event) => handleEditClick(event, item)}>
-            Editar
-          </button>
-        </td>
-      </>
-    )}
-  </tr>
-))}
+          {data[selectedCompany] && data[selectedCompany].map((item) => (
+            <tr key={item.id} className='flex justify-between items-center bg-gray-50'>
+              {editRowId === item.id ? (
+                <>
+                  <td className='w-1/4 m-2'>
+                    <select
+                      value={editFormData.segmentoIni}
+                      name="segmentoIni"
+                      onChange={handleEditFormChange}
+                      className='w-full text-center outline-none border border-cyan-700'
+                    >
+                      {segmentoOptions[selectedCompany].map((option, index) => (
+                        <option key={index} value={option}>{option}</option>
+                      ))}
+                    </select>
+                  </td>
+                  <td className='w-1/4 m-2'>
+                    <select
+                      value={editFormData.segmentoFin}
+                      name="segmentoFin"
+                      onChange={handleEditFormChange}
+                      className='w-full text-center outline-none border border-cyan-700'
+                    >
+                      {segmentoOptions[selectedCompany].map((option, index) => (
+                        <option  key={index} value={option}>{option}</option>
+                      ))}
+                    </select>
+                  </td>
+                  <td className='w-1/4 m-2'>
+                    <select
+                      value={editFormData.tarifa}
+                      name="tarifa"
+                      onChange={handleEditFormChange}
+                      className='w-full text-center outline-none border border-cyan-700'
+                    >
+                      {tarifaOptions.map((option, index) => (
+                        <option key={index} value={option}>{option}</option>
+                      ))}
+                    </select>
+                  </td>
+                  <td className='w-1/4 flex justify-center items-center gap-1 m-2'>
+                    <button type="button" className='bg-green-200 px-1 py-1' onClick={handleSaveClick}>Guardar</button>
+                    <button type="button" className='bg-yellow-200 px-1 py-1' onClick={handleCancelClick}>Cancelar</button>
+                    <button type="button" className='bg-red-200 px-1 py-1' onClick={() => handleDeleteClick(item.id)}>Eliminar</button>
+                  </td>
+                </>
+              ) : (
+                <>
+                  <td className='w-1/4 m-2 text-center'>{item.segmentoIni}</td>
+                  <td className='w-1/4 m-2 text-center'>{item.segmentoFin}</td>
+                  <td className='w-1/4 m-2 text-center'>{item.tarifa}</td>
+                  <td className='w-1/4 m-2 flex justify-center items-center'>
+                    <button type="button" className='bg-cyan-700 text-white hover:bg-cyan-800 px-3 py-1' onClick={(event) => handleEditClick(event, item)}>
+                      Editar
+                    </button>
+                  </td>
+                </>
+              )}
+            </tr>
+          ))}
         </tbody>
       </table>
-      <div className="flex justify-between items-center gap-6 my-3 w-full">
-        <input
-          type="text"
+
+      {/* Section to add new rows */}
+      <div className="flex justify-between items-center gap-3 my-3">
+        <select
           name="segmentoIni"
           value={newData.segmentoIni}
           onChange={handleNewDataChange}
           className="w-1/4 py-2 px-6 outline-none border border-cyan-700"
-          placeholder="Segmento Inicial"
-        />
-        <input
-          type="text"
+        >
+          <option value="">Segmento Inicial</option>
+          {segmentoOptions[selectedCompany].map((option, index) => (
+            <option key={index} value={option}>{option}</option>
+          ))}
+        </select>
+
+        <select
           name="segmentoFin"
           value={newData.segmentoFin}
           onChange={handleNewDataChange}
           className="w-1/4 py-2 px-6 outline-none border border-cyan-700"
-          placeholder="Segmento Final"
-        />
-        <input
-          type="number"
+        >
+          <option value="">Segmento Final</option>
+          {segmentoOptions[selectedCompany].map((option, index) => (
+            <option key={index} value={option}>{option}</option>
+          ))}
+        </select>
+
+        <select
           name="tarifa"
           value={newData.tarifa}
           onChange={handleNewDataChange}
           className="w-1/4 py-2 px-6 outline-none border border-cyan-700"
-          placeholder="Tarifa"
-        />
+        >
+          <option value="">Tarifa</option>
+          {tarifaOptions.map((option, index) => (
+            <option key={index} value={option}>{option}</option>
+          ))}
+        </select>
+
         <button
           onClick={handleAddRow}
-          className="w-1/4 bg-cyan-700 hover:bg-cyan-800 text-white px-4 py-2"
+          className="bg-cyan-700 hover:bg-cyan-800 text-white px-4 py-2 w-1/4"
         >
           Agregar
         </button>
