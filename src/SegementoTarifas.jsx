@@ -116,6 +116,9 @@ export default function SegementoTarifas() {
       tarifa: Number(newData.tarifa),
       segmentoFin: newData.segmentoFin
     };
+    if (!newItem.segmentoIni || !newItem.segmentoFin || !newItem.tarifa) {
+      return;
+    }
     const updatedData = [...data[selectedCompany], newItem];
     setData({ ...data, [selectedCompany]: updatedData });
     setNewData({ segmentoIni: '', tarifa: '', segmentoFin: '' }); // Reset the input fields
@@ -125,7 +128,7 @@ export default function SegementoTarifas() {
     <div className='max-w-screen-lg m-auto'>
       <div className='flex justify-start items-center p-3 gap-6 my-3'>
         <label className='mr-2'>Seleccionar empresa:</label>
-        <select value={selectedCompany} onChange={handleCompanyChange} className='py-2 px-6 outline-none bg-cyan-800 text-white border-none focus:border-none'>
+        <select value={selectedCompany} onChange={handleCompanyChange} className='py-2 px-6 outline-none bg-cyan-800 text-white border-none focus:border-none cursor-pointer'>
           <option value="Translebrija" className='p-3 mb-2'>Translebrija</option>
           <option value="Metropolitana">Metropolitana</option>
           <option value="Empresa04">Empresa 04</option>
@@ -151,7 +154,7 @@ export default function SegementoTarifas() {
                       value={editFormData.segmentoIni}
                       name="segmentoIni"
                       onChange={handleEditFormChange}
-                      className='w-full text-center outline-none border border-cyan-700'
+                      className='w-full text-center outline-none border border-cyan-700 cursor-pointer'
                     >
                       {segmentoOptions[selectedCompany].map((option, index) => (
                         <option key={index} value={option}>{option}</option>
@@ -163,7 +166,7 @@ export default function SegementoTarifas() {
                       value={editFormData.segmentoFin}
                       name="segmentoFin"
                       onChange={handleEditFormChange}
-                      className='w-full text-center outline-none border border-cyan-700'
+                      className='w-full text-center outline-none border border-cyan-700 cursor-pointer'
                     >
                       {segmentoOptions[selectedCompany].map((option, index) => (
                         <option  key={index} value={option}>{option}</option>
@@ -175,7 +178,7 @@ export default function SegementoTarifas() {
                       value={editFormData.tarifa}
                       name="tarifa"
                       onChange={handleEditFormChange}
-                      className='w-full text-center outline-none border border-cyan-700'
+                      className='w-full text-center outline-none border border-cyan-700 cursor-pointer'
                     >
                       {tarifaOptions.map((option, index) => (
                         <option key={index} value={option}>{option}</option>
@@ -211,7 +214,7 @@ export default function SegementoTarifas() {
           name="segmentoIni"
           value={newData.segmentoIni}
           onChange={handleNewDataChange}
-          className="w-1/4 py-2 px-6 outline-none border border-cyan-700"
+          className="w-1/4 py-2 px-6 outline-none border border-cyan-700 cursor-pointer"
         >
           <option value="">Segmento Inicial</option>
           {segmentoOptions[selectedCompany].map((option, index) => (
@@ -223,7 +226,7 @@ export default function SegementoTarifas() {
           name="segmentoFin"
           value={newData.segmentoFin}
           onChange={handleNewDataChange}
-          className="w-1/4 py-2 px-6 outline-none border border-cyan-700"
+          className="w-1/4 py-2 px-6 outline-none border border-cyan-700 cursor-pointer"
         >
           <option value="">Segmento Final</option>
           {segmentoOptions[selectedCompany].map((option, index) => (
@@ -235,7 +238,7 @@ export default function SegementoTarifas() {
           name="tarifa"
           value={newData.tarifa}
           onChange={handleNewDataChange}
-          className="w-1/4 py-2 px-6 outline-none border border-cyan-700"
+          className="w-1/4 py-2 px-6 outline-none border border-cyan-700 cursor-pointer"
         >
           <option value="">Tarifa</option>
           {tarifaOptions.map((option, index) => (
