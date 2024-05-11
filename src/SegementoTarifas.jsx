@@ -1,32 +1,33 @@
 import { useState } from 'react';
 
-export default function SegementoTarifas() {
+export default function SegmentoTarifas() {
   // Initialize with sample data for each company
   const initialData = {
     Translebrija: [
-      { id: 1, segmentoIni: "Lebrija", tarifa:2000, segmentoFin: "Lebrija" },
-      { id: 2, segmentoIni: "Lebrija - Peaje", tarifa:2500, segmentoFin: "Lebrija - Peaje" },
-      { id: 3, segmentoIni: "Peaje - Giron", tarifa:3000, segmentoFin: "Peaje - Giron" },
-      { id: 4, segmentoIni: "Giron Bucaramanga", tarifa:3500, segmentoFin: "Giron Bucaramanga" }
+      { id: 1, segmentoIni: "Lebrija", tarifa: 2000, segmentoFin: "Lebrija" },
+      { id: 2, segmentoIni: "Lebrija - Peaje", tarifa: 2500, segmentoFin: "Lebrija - Peaje" },
+      { id: 3, segmentoIni: "Peaje - Giron", tarifa: 3000, segmentoFin: "Peaje - Giron" },
+      { id: 4, segmentoIni: "Giron Bucaramanga", tarifa: 3500, segmentoFin: "Giron Bucaramanga" }
     ],
-    Metropolitana : [
-      { id: 1, segmentoIni: "Bucaramanga", tarifa:2000, segmentoFin: "Bucaramanga" },
-      { id: 2, segmentoIni: "Florida", tarifa:2500, segmentoFin: "Florida" },
-      { id: 3, segmentoIni: "Piedecuesta", tarifa:3000, segmentoFin: "Piedecuesta" },
-      { id: 4, segmentoIni: "Giron Bucaramanga", tarifa:3500, segmentoFin: "Giron Bucaramanga" }
+    Metropolitana: [
+      { id: 1, segmentoIni: "Bucaramanga", tarifa: 2000, segmentoFin: "Bucaramanga" },
+      { id: 2, segmentoIni: "Florida", tarifa: 2500, segmentoFin: "Florida" },
+      { id: 3, segmentoIni: "Piedecuesta", tarifa: 3000, segmentoFin: "Piedecuesta" },
+      { id: 4, segmentoIni: "Giron Bucaramanga", tarifa: 3500, segmentoFin: "Giron Bucaramanga" }
     ],
     Empresa04: [
-      { id: 1, segmentoIni: "Segemento 01", tarifa:2000, segmentoFin: "Segemento 01" },
-      { id: 2, segmentoIni: "Segemento 02", tarifa:2500, segmentoFin: "Segemento 02" },
-      { id: 3, segmentoIni: "Segemento 03", tarifa:3000, segmentoFin: "Segemento 03" },
-      { id: 4, segmentoIni: "Segemento 04", tarifa:3500, segmentoFin: "Segemento 04" }
+      { id: 1, segmentoIni: "Segemento 01", tarifa: 2000, segmentoFin: "Segemento 01" },
+      { id: 2, segmentoIni: "Segemento 02", tarifa: 2500, segmentoFin: "Segemento 02" },
+      { id: 3, segmentoIni: "Segemento 03", tarifa: 3000, segmentoFin: "Segemento 03" },
+      { id: 4, segmentoIni: "Segemento 04", tarifa: 3500, segmentoFin: "Segemento 04" }
     ]
   };
 
   const [data, setData] = useState(initialData);
   const [editRowId, setEditRowId] = useState(null);
-  const [editFormData, setEditFormData] = useState({ id: null, segmentoIni: '', tarifa: '', segmentoFin: '', });
+  const [editFormData, setEditFormData] = useState({ id: null, segmentoIni: '', tarifa: '', segmentoFin: '' });
   const [selectedCompany, setSelectedCompany] = useState('Translebrija');
+  const [newData, setNewData] = useState({ segmentoIni: '', tarifa: '', segmentoFin: '' });
 
   // Function to handle form change for editing
   const handleEditFormChange = (event) => {
@@ -63,7 +64,7 @@ export default function SegementoTarifas() {
 
     const newData = data[selectedCompany].map((item) => (item.id === editRowId ? editedItem : item));
 
-    setData({...data, [selectedCompany]: newData});
+    setData({ ...data, [selectedCompany]: newData });
     setEditRowId(null);
   };
 
@@ -75,7 +76,7 @@ export default function SegementoTarifas() {
   // Function to handle deleting a row
   const handleDeleteClick = (itemId) => {
     const newData = data[selectedCompany].filter((item) => item.id !== itemId);
-    setData({...data, [selectedCompany]: newData});
+    setData({ ...data, [selectedCompany]: newData });
     if (editRowId === itemId) {
       setEditRowId(null); // Reset editing if the current edit row is deleted
     }
@@ -87,14 +88,28 @@ export default function SegementoTarifas() {
     setEditRowId(null); // Reset any active editing when changing companies
   };
 
-  // Select options for segmentoIni and segmentoFin
-  const segmentoOptions = {
-    Translebrija: ["Lebrija", "Lebrija - Peaje", "Peaje - Giron", "Giron Bucaramanga"],
-    Metropolitana: ["Bucaramanga", "Florida", "Piedecuesta", "Giron Bucaramanga"]
+  // Function to handle new data input change
+  const handleNewDataChange = (event) => {
+    const { name, value } = event.target;
+    setNewData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
   };
 
-  // Select options for tarifa
-  const tarifaOptions = [2000, 2500, 3000, 3500];
+  // Function to add a new row to the table
+  const handleAddRow = () => {
+    const newId = data[selectedCompany].length ? data[selectedCompany][data[selectedCompany].length - 1].id + 1 : 1;
+    const newItem = {
+      id: newId,
+      segmentoIni: newData.segmentoIni,
+      tarifa: Number(newData.tarifa),
+      segmentoFin: newData.segmentoFin
+    };
+    const updatedData = [...data[selectedCompany], newItem];
+    setData({ ...data, [selectedCompany]: updatedData });
+    setNewData({ segmentoIni: '', tarifa: '', segmentoFin: '' }); // Reset the input fields
+  };
 
   return (
     <div className='max-w-screen-lg m-auto'>
@@ -128,9 +143,7 @@ export default function SegementoTarifas() {
             onChange={handleEditFormChange}
             className='w-full text-center outline-none border border-cyan-700'
           >
-            {segmentoOptions[selectedCompany].map((option, index) => (
-              <option key={index} value={option}>{option}</option>
-            ))}
+            <option value="">{editFormData.segmentoIni}</option>
           </select>
         </td>
         <td className='w-1/4 m-2'>
@@ -140,9 +153,7 @@ export default function SegementoTarifas() {
             onChange={handleEditFormChange}
             className='w-full text-center outline-none border border-cyan-700'
           >
-            {segmentoOptions[selectedCompany].map((option, index) => (
-              <option  key={index} value={option}>{option}</option>
-            ))}
+            <option value="">{editFormData.segmentoFin}</option>
           </select>
         </td>
         <td className='w-1/4 m-2'>
@@ -152,8 +163,8 @@ export default function SegementoTarifas() {
             onChange={handleEditFormChange}
             className='w-full text-center outline-none border border-cyan-700'
           >
-            {tarifaOptions.map((option, index) => (
-              <option key={index} value={option}>{option}</option>
+            {Array.from({ length: 6 }, (_, i) => (2000 + i * 500)).map((option) => (
+              <option key={option} value={option}>{option}</option>
             ))}
           </select>
         </td>
@@ -179,6 +190,38 @@ export default function SegementoTarifas() {
 ))}
         </tbody>
       </table>
+      <div className="flex justify-between items-center gap-6 my-3 w-full">
+        <input
+          type="text"
+          name="segmentoIni"
+          value={newData.segmentoIni}
+          onChange={handleNewDataChange}
+          className="w-1/4 py-2 px-6 outline-none border border-cyan-700"
+          placeholder="Segmento Inicial"
+        />
+        <input
+          type="text"
+          name="segmentoFin"
+          value={newData.segmentoFin}
+          onChange={handleNewDataChange}
+          className="w-1/4 py-2 px-6 outline-none border border-cyan-700"
+          placeholder="Segmento Final"
+        />
+        <input
+          type="number"
+          name="tarifa"
+          value={newData.tarifa}
+          onChange={handleNewDataChange}
+          className="w-1/4 py-2 px-6 outline-none border border-cyan-700"
+          placeholder="Tarifa"
+        />
+        <button
+          onClick={handleAddRow}
+          className="w-1/4 bg-cyan-700 hover:bg-cyan-800 text-white px-4 py-2"
+        >
+          Agregar
+        </button>
+      </div>
     </div>
   );
 }
