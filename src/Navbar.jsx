@@ -22,6 +22,10 @@ const dataMenu = [
     path: '/SegmentoTarifas',
     name: 'Segmentos Tarifas'
   },
+  {
+    path: '/CierreDiario',
+    name: 'Cierre Diario'
+  }
 
 ]
 export default function Navbar () {
