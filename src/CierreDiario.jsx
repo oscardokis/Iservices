@@ -2,7 +2,7 @@ import { useState } from 'react'
 import data from './assets/cierreDiario.json'
 export default function CierreDiario(){
   const [selectedCompany, setSelectedCompany] = useState('Translebrija');
-  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedDate, setSelectedDate] = useState("2024-05-13");
   const [dataToShow, setDataToShow] = useState([]);
   const [showTable, setShowTable] = useState(false);
 
