@@ -2,7 +2,8 @@ import { useState } from 'react'
 import data from './assets/cierreDiario.json'
 export default function CierreDiario(){
   const [selectedCompany, setSelectedCompany] = useState('Translebrija');
-  const [selectedDate, setSelectedDate] = useState("2024-05-13");
+  const [selectedDate, setSelectedDate] = useState("2024-05-12");
+  const [selectedDate2, setSelectedDate2] = useState("2024-05-13");
   const [dataToShow, setDataToShow] = useState([]);
   const [showTable, setShowTable] = useState(false);
 
@@ -14,8 +15,18 @@ export default function CierreDiario(){
     setSelectedDate(event.target.value);
   };
 
+  const handleDateChange2 = (event) => {
+    setSelectedDate2(event.target.value);
+  };
+
   const handleButtonClick = () => {
     const filteredData = data[selectedCompany].filter(item => item.Fecha === selectedDate);
+    setDataToShow(filteredData);
+    setShowTable(true);
+  };
+
+  const handleButtonClick2 = () => {
+    const filteredData = data[selectedCompany].filter(item => item.Fecha === selectedDate2);
     setDataToShow(filteredData);
     setShowTable(true);
   };
@@ -32,14 +43,18 @@ export default function CierreDiario(){
         </select>
       </div>
 
-        <div className='flex gap-3 items-center'>
+      <div className='flex gap-3 items-center'>
         <p className='w-28 flex'>Fecha:</p>
         <input type="date" className='border border-cyan-800 w-36' name='date' value={selectedDate} onChange={handleDateChange}/>
-      </div>
-      </div>
-      <div className='flex justify-center items-center gap-6 mb-3'>
         <button onClick={handleButtonClick}  className='bg-cyan-800 hover:bg-cyan-700 text-white p-2 rounded-sm text-center w-40'>Consultar</button>
-        <button onClick={handleButtonClick}  className='bg-cyan-800 hover:bg-cyan-700 text-white p-2 rounded-sm text-center w-40'>Cierre Dia</button>
+        
+      </div>
+      <div className='flex gap-3 items-center'>
+        <p className='w-28 flex'>Fecha:</p>
+        <input type="date" className='border border-cyan-800 w-36' name='date' value={selectedDate2} onChange={handleDateChange2}/>
+        <button onClick={handleButtonClick2}  className='bg-cyan-800 hover:bg-cyan-700 text-white p-2 rounded-sm text-center w-40'>Cierre Dia</button>
+      </div>
+      
       </div>
 
       {showTable && (

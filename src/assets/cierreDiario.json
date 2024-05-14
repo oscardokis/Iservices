@@ -12,14 +12,14 @@
           "Tipo": "Recarga QR",
           "Accion": "anulados",
           "Cantidad": 1,
-          "Fecha": "2024-05-13"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 3,
           "Tipo": "Recarga QR",
           "Accion": "reservados",
           "Cantidad": 178,
-          "Fecha": "2024-05-10"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 4,
@@ -33,35 +33,35 @@
           "Tipo": "Recargas Subsidiadas",
           "Accion": "transladados",
           "Cantidad": 7,
-          "Fecha": "2024-05-10"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 6,
           "Tipo": "Venta Tiquetes",
           "Accion": "consumidos",
           "Cantidad": 116,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 7,
           "Tipo": "Recargas Subsidiadas",
           "Accion": "consumidos",
           "Cantidad": 185,
-          "Fecha": "2024-05-09"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 8,
           "Tipo": "Recarga QR",
           "Accion": "reservados",
           "Cantidad": 156,
-          "Fecha": "2024-05-11"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 9,
           "Tipo": "Venta Tiquetes",
           "Accion": "consumidos",
           "Cantidad": 175,
-          "Fecha": "2024-05-13"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 10,
@@ -75,14 +75,14 @@
           "Tipo": "Venta Tiquetes",
           "Accion": "reservados",
           "Cantidad": 120,
-          "Fecha": "2024-05-11"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 12,
           "Tipo": "Venta Tiquetes",
           "Accion": "transladados",
           "Cantidad": 6,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 13,
@@ -96,50 +96,219 @@
           "Tipo": "Recarga QR",
           "Accion": "reservados",
           "Cantidad": 101,
-          "Fecha": "2024-05-10"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 15,
           "Tipo": "Recarga QR",
           "Accion": "creados",
           "Cantidad": 2,
-          "Fecha": "2024-05-09"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 16,
           "Tipo": "Venta Tiquetes",
           "Accion": "creados",
           "Cantidad": 1,
-          "Fecha": "2024-05-11"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 17,
           "Tipo": "Recargas Subsidiadas",
           "Accion": "creados",
           "Cantidad": 3,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 18,
           "Tipo": "Venta Tiquetes",
           "Accion": "anulados",
           "Cantidad": 0,
-          "Fecha": "2024-05-13"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 19,
           "Tipo": "Venta Tiquetes",
           "Accion": "transladados",
           "Cantidad": 9,
-          "Fecha": "2024-05-10"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 20,
           "Tipo": "Recargas Subsidiadas",
           "Accion": "transladados",
           "Cantidad": 10,
-          "Fecha": "2024-05-11"
+          "Fecha": "2024-05-12"
+      },
+      {
+        "id": 21,
+        "Tipo": "Recarga QR",
+        "Accion": "consumidos",
+        "Cantidad": 176,
+        "Fecha": "2024-05-12"
+    },
+    {
+        "id": 1,
+        "Tipo": "Recarga QR",
+        "Accion": "consumidos",
+        "Cantidad": 176,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 2,
+        "Tipo": "Recarga QR",
+        "Accion": "anulados",
+        "Cantidad": 1,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 3,
+        "Tipo": "Recarga QR",
+        "Accion": "reservados",
+        "Cantidad": 178,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 4,
+        "Tipo": "Venta Tiquetes",
+        "Accion": "anulados",
+        "Cantidad": 1,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 5,
+        "Tipo": "Recargas Subsidiadas",
+        "Accion": "transladados",
+        "Cantidad": 7,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 6,
+        "Tipo": "Venta Tiquetes",
+        "Accion": "consumidos",
+        "Cantidad": 116,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 7,
+        "Tipo": "Recargas Subsidiadas",
+        "Accion": "consumidos",
+        "Cantidad": 185,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 8,
+        "Tipo": "Recarga QR",
+        "Accion": "reservados",
+        "Cantidad": 156,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 9,
+        "Tipo": "Venta Tiquetes",
+        "Accion": "Creados",
+        "Cantidad": 0,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 10,
+        "Tipo": "Venta Tiquetes",
+        "Accion": "Reservados",
+        "Cantidad": 100,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 11,
+        "Tipo": "Venta Tiquetes",
+        "Accion": "Consumidos",
+        "Cantidad": 130,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 13,
+        "Tipo": "Venta Tiquetes",
+        "Accion": "Trasladados",
+        "Cantidad": 5,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 13,
+        "Tipo": "Venta Tiquetes",
+        "Accion": "Anulados",
+        "Cantidad": 0,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 14,
+        "Tipo": "Recargas Subsidiadas",
+        "Accion": "Creados",
+        "Cantidad": 0,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 15,
+        "Tipo": "Recargas Subsidiadas",
+        "Accion": "Reservados",
+        "Cantidad": 130,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 16,
+        "Tipo": "Recargas Subsidiadas",
+        "Accion": "Consumidos",
+        "Cantidad": 80,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 17,
+        "Tipo": "Recargas Subsidiadas",
+        "Accion": "Trasladados",
+        "Cantidad": 0,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 18,
+        "Tipo": "Recargas Subsidiadas",
+        "Accion": "Anulados",
+        "Cantidad": 0,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 19,
+        "Tipo": "Recarga QR",
+        "Accion": "Creados",
+        "Cantidad": 5000,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 20,
+        "Tipo": "Recarga QR",
+        "Accion": "Reservados",
+        "Cantidad": 300,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 21,
+        "Tipo": "Recarga QR",
+        "Accion": "Consumidos",
+        "Cantidad": 20,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 22,
+        "Tipo": "Recarga QR",
+        "Accion": "Trasladados",
+        "Cantidad": 0,
+        "Fecha": "2024-05-13"
+      },
+      {
+        "id": 23,
+        "Tipo": "Recarga QR",
+        "Accion": "Anulados",
+        "Cantidad": 2,
+        "Fecha": "2024-05-13"
       }
+      
   ],
   "Metropolitana": [
       {
@@ -147,28 +316,28 @@
           "Tipo": "Recarga QR",
           "Accion": "reservados",
           "Cantidad": 197,
-          "Fecha": "2024-05-09"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 2,
           "Tipo": "Venta Tiquetes",
           "Accion": "anulados",
           "Cantidad": 1,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 3,
           "Tipo": "Recargas Subsidiadas",
           "Accion": "consumidos",
           "Cantidad": 126,
-          "Fecha": "2024-05-10"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 4,
           "Tipo": "Venta Tiquetes",
           "Accion": "creados",
           "Cantidad": 0,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 5,
@@ -182,56 +351,56 @@
           "Tipo": "Venta Tiquetes",
           "Accion": "reservados",
           "Cantidad": 196,
-          "Fecha": "2024-05-13"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 7,
           "Tipo": "Recarga QR",
           "Accion": "anulados",
           "Cantidad": 1,
-          "Fecha": "2024-05-11"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 8,
           "Tipo": "Recargas Subsidiadas",
           "Accion": "transladados",
           "Cantidad": 7,
-          "Fecha": "2024-05-09"
+          "Fecha": "2024-05-12"
       },
       {
           "id": 9,
           "Tipo": "Recargas Subsidiadas",
           "Accion": "reservados",
           "Cantidad": 151,
-          "Fecha": "2024-05-10"
+          "Fecha": "2024-05-13"
       },
       {
           "id": 10,
           "Tipo": "Venta Tiquetes",
           "Accion": "consumidos",
           "Cantidad": 182,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-13"
       },
       {
           "id": 11,
           "Tipo": "Recargas Subsidiadas",
           "Accion": "reservados",
           "Cantidad": 197,
-          "Fecha": "2024-05-12"
+          "Fecha": "2024-05-13"
       },
       {
           "id": 12,
           "Tipo": "Venta Tiquetes",
           "Accion": "transladados",
           "Cantidad": 8,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-13"
       },
       {
           "id": 13,
           "Tipo": "Recarga QR",
           "Accion": "reservados",
           "Cantidad": 180,
-          "Fecha": "2024-05-11"
+          "Fecha": "2024-05-13"
       },
       {
           "id": 14,
@@ -245,7 +414,7 @@
           "Tipo": "Recarga QR",
           "Accion": "creados",
           "Cantidad": 0,
-          "Fecha": "2024-05-12"
+          "Fecha": "2024-05-13"
       },
       {
           "id": 16,
@@ -259,35 +428,35 @@
           "Tipo": "Recarga QR",
           "Accion": "transladados",
           "Cantidad": 8,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-13"
       },
       {
           "id": 18,
           "Tipo": "Recargas Subsidiadas",
           "Accion": "transladados",
           "Cantidad": 5,
-          "Fecha": "2024-05-12"
+          "Fecha": "2024-05-13"
       },
       {
           "id": 19,
           "Tipo": "Recargas Subsidiadas",
           "Accion": "transladados",
           "Cantidad": 8,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-13"
       },
       {
           "id": 20,
           "Tipo": "Recarga QR",
           "Accion": "anulados",
           "Cantidad": 1,
-          "Fecha": "2024-05-08"
+          "Fecha": "2024-05-13"
       },
       {
         "id": 21,
         "Tipo": "Recargas Subsidiadas",
         "Accion": "consumidos",
         "Cantidad": 110,
-        "Fecha": "2024-05-10"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 22,
@@ -301,42 +470,42 @@
         "Tipo": "Venta Tiquetes",
         "Accion": "transladados",
         "Cantidad": 8,
-        "Fecha": "2024-05-11"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 24,
         "Tipo": "Venta Tiquetes",
         "Accion": "creados",
         "Cantidad": 1,
-        "Fecha": "2024-05-09"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 25,
         "Tipo": "Recarga QR",
         "Accion": "anulados",
         "Cantidad": 0,
-        "Fecha": "2024-05-08"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 26,
         "Tipo": "Recargas Subsidiadas",
         "Accion": "creados",
         "Cantidad": 1,
-        "Fecha": "2024-05-12"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 27,
         "Tipo": "Venta Tiquetes",
         "Accion": "reservados",
         "Cantidad": 150,
-        "Fecha": "2024-05-11"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 28,
         "Tipo": "Recarga QR",
         "Accion": "transladados",
         "Cantidad": 9,
-        "Fecha": "2024-05-10"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 29,
@@ -350,56 +519,56 @@
         "Tipo": "Recargas Subsidiadas",
         "Accion": "anulados",
         "Cantidad": 1,
-        "Fecha": "2024-05-08"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 31,
         "Tipo": "Venta Tiquetes",
         "Accion": "creados",
         "Cantidad": 2,
-        "Fecha": "2024-05-13"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 32,
         "Tipo": "Recarga QR",
         "Accion": "reservados",
         "Cantidad": 125,
-        "Fecha": "2024-05-09"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 33,
         "Tipo": "Recargas Subsidiadas",
         "Accion": "consumidos",
         "Cantidad": 117,
-        "Fecha": "2024-05-11"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 34,
         "Tipo": "Venta Tiquetes",
         "Accion": "transladados",
         "Cantidad": 7,
-        "Fecha": "2024-05-08"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 35,
         "Tipo": "Recarga QR",
         "Accion": "creados",
         "Cantidad": 0,
-        "Fecha": "2024-05-13"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 36,
         "Tipo": "Recargas Subsidiadas",
         "Accion": "anulados",
         "Cantidad": 1,
-        "Fecha": "2024-05-10"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 37,
         "Tipo": "Recarga QR",
         "Accion": "reservados",
         "Cantidad": 183,
-        "Fecha": "2024-05-11"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 38,
@@ -413,14 +582,14 @@
         "Tipo": "Recargas Subsidiadas",
         "Accion": "transladados",
         "Cantidad": 6,
-        "Fecha": "2024-05-08"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 40,
         "Tipo": "Venta Tiquetes",
         "Accion": "anulados",
         "Cantidad": 0,
-        "Fecha": "2024-05-09"
+        "Fecha": "2024-05-12"
     }
   ],
   "Empresa04": [
@@ -429,35 +598,35 @@
         "Tipo": "Recargas Subsidiadas",
         "Accion": "consumidos",
         "Cantidad": 110,
-        "Fecha": "2024-05-10"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 2,
         "Tipo": "Recarga QR",
         "Accion": "reservados",
         "Cantidad": 116,
-        "Fecha": "2024-05-13"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 3,
         "Tipo": "Venta Tiquetes",
         "Accion": "transladados",
         "Cantidad": 8,
-        "Fecha": "2024-05-11"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 4,
         "Tipo": "Venta Tiquetes",
         "Accion": "creados",
         "Cantidad": 1,
-        "Fecha": "2024-05-09"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 5,
         "Tipo": "Recarga QR",
         "Accion": "anulados",
         "Cantidad": 0,
-        "Fecha": "2024-05-08"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 6,
@@ -471,14 +640,14 @@
         "Tipo": "Venta Tiquetes",
         "Accion": "reservados",
         "Cantidad": 150,
-        "Fecha": "2024-05-11"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 8,
         "Tipo": "Recarga QR",
         "Accion": "transladados",
         "Cantidad": 9,
-        "Fecha": "2024-05-10"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 9,
@@ -492,7 +661,7 @@
         "Tipo": "Recargas Subsidiadas",
         "Accion": "anulados",
         "Cantidad": 1,
-        "Fecha": "2024-05-08"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 11,
@@ -506,21 +675,21 @@
         "Tipo": "Recarga QR",
         "Accion": "reservados",
         "Cantidad": 125,
-        "Fecha": "2024-05-09"
+        "Fecha": "2024-05-12"
     },
     {
         "id": 13,
         "Tipo": "Recargas Subsidiadas",
         "Accion": "consumidos",
         "Cantidad": 117,
-        "Fecha": "2024-05-11"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 14,
         "Tipo": "Venta Tiquetes",
         "Accion": "transladados",
         "Cantidad": 7,
-        "Fecha": "2024-05-08"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 15,
@@ -534,35 +703,35 @@
         "Tipo": "Recargas Subsidiadas",
         "Accion": "anulados",
         "Cantidad": 1,
-        "Fecha": "2024-05-10"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 17,
         "Tipo": "Recarga QR",
         "Accion": "reservados",
         "Cantidad": 183,
-        "Fecha": "2024-05-11"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 18,
         "Tipo": "Venta Tiquetes",
         "Accion": "creados",
         "Cantidad": 3,
-        "Fecha": "2024-05-12"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 19,
         "Tipo": "Recargas Subsidiadas",
         "Accion": "transladados",
         "Cantidad": 6,
-        "Fecha": "2024-05-08"
+        "Fecha": "2024-05-13"
     },
     {
         "id": 20,
         "Tipo": "Venta Tiquetes",
         "Accion": "anulados",
         "Cantidad": 0,
-        "Fecha": "2024-05-09"
+        "Fecha": "2024-05-13"
     }
 ]
 }
