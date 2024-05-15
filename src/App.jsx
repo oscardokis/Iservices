@@ -10,6 +10,7 @@ import Segmentos from './Segmentos'
 import SegementoTarifas from './SegementoTarifas'
 import Navbar from './Navbar'
 import CierreDiario from './CierreDiario'
+import Login from './Login'
 
 const AppRouter = () => {
   let routes = useRoutes([
@@ -20,6 +21,7 @@ const AppRouter = () => {
     { path: '/Segmentos', element: <Segmentos /> },
     { path: '/SegmentoTarifas', element: <SegementoTarifas /> },
     { path: '/CierreDiario', element: <CierreDiario /> },
+    { path: '/Login', element: <Login /> }
 
   ])
   return routes

@@ -25,6 +25,10 @@ const dataMenu = [
   {
     path: '/CierreDiario',
     name: 'Cierre Diario'
+  },
+  {
+    path: '/Login',
+    name: 'Iniciar Sesión'
   }
 
 ]
