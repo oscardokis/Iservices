@@ -41,7 +41,7 @@ export default function Navbar () {
     if (matchedItem) {
       setTitle(matchedItem.name.toUpperCase());
     } else {
-      setTitle('DEFAULT TITLE');
+      setTitle('USUARIO FINAL');
     }
   }, [pathname]);
   
