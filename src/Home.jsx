@@ -33,7 +33,7 @@ const data = [
     rightData: 'Consumo'
   },
   {
-    id: 6,
+    id: 7,
     leftData: 'Total Transacciones',
     rightData: '32'
   },
