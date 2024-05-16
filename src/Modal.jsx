@@ -36,7 +36,7 @@ const Modal = ({ show, onClose, onSubmit }) => {
               onClick={onClose}
               className="bg-gray-500 text-white font-light text-sm py-3 hover:bg-gray-700 shadow-lg w-32"
             >
-              Close
+              Cerrar
             </button>
 
           </div>
