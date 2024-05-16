@@ -13,7 +13,7 @@ export default function Login() {
         <div className='w-40 flex justify-center items-center mb-12'>
           <img  src={image3} alt="" className='w-full' />
         </div>
-        <form className='flex gap-6 justify-center flex-wrap bg-white p-6 rounded-lg shadow-lg'>
+        <form className='flex gap-6 justify-center items-center flex-wrap bg-white p-6 rounded-lg shadow-lg'>
           <h1 className='text-xl font-semibold text-black/70'>Iniciar Sesión</h1>
 
           <label className='flex-grow '>
